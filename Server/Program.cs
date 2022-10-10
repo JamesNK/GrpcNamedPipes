@@ -9,8 +9,8 @@ using Server;
 AppDomain.CurrentDomain.SetPrincipalPolicy(PrincipalPolicy.WindowsPrincipal);
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddSingleton<IConnectionListenerFactory, NamedPipeTransportFactory>();
 builder.Services.AddGrpc();
+builder.Services.AddSingleton<IConnectionListenerFactory, NamedPipeTransportFactory>();
 builder.WebHost.ConfigureKestrel(options =>
 {
     options.Listen(new NamedPipeEndPoint("Pipe-1"), listenOptions =>

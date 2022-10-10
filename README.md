@@ -4,8 +4,9 @@
 
 ## Server
 
-1. Register `NamedPipeTransportFactory`
-2. Configure Kestrel to listen to a named pipe endpoint.
+1. Add `Microsoft.AspNetCore.Server.Kestrel.Transport.NamedPipes` package to server. This package is currently hosted out of a folder on disk.
+2. Register `NamedPipeTransportFactory`
+3. Configure Kestrel to listen to a named pipe endpoint.
 
 ```csharp
 builder.Services.AddSingleton<IConnectionListenerFactory, NamedPipeTransportFactory>();

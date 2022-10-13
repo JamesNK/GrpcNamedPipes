@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.49.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Transport.NamedPipes" Version="0.3.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Transport.NamedPipes" Version="0.3.6" />
 
     <Protobuf Include="..\Proto\greet.proto" GrpcServices="Server" Link="Protos\greet.proto" />
   </ItemGroup>
